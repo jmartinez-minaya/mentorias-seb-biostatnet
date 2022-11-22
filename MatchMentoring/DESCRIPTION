@@ -1,12 +1,10 @@
 Package: MatchMentoring
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Este paquete ha nacido con la intención de facilitar los matches en el programa de mentorías de la SEB y Biostatnet (https://www.mentorias-sebbiostatnet.es/). 
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Joaquín Martínez-Minaya
+Maintainer: The package maintainer <jomarminaya@gmail.com>
+Description: Consta de dos funciones que nos ayudarán a generar las matrices de preferencia entre mentorandxs y mentores. 
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1

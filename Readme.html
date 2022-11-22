@@ -371,8 +371,12 @@ entre mentores y mentorandxs</h1>
 </div>
 <div id="introducción" class="section level1">
 <h1>Introducción</h1>
-<p>Se quiere realizar un match entre lxs mentores y lxs mentorandxs.
-Para ello, utilizaremos lo que se conoce en la literatura como el <a href="https://dl.acm.org/doi/pdf/10.1145/362619.362631">problema del
+<p>Este repositorio ha nacido como parte del programa de mentorías de la
+<a href="http://www.biometricsociety.net/">Sociedad Española de
+Bioestadística</a> y la <a href="https://biostatnet.com/">Red Nacional
+de Bioestadísticos de España</a>. (<a href="https://www.mentorias-sebbiostatnet.es/">Enlace al programa</a>)
+Se quiere realizar un match entre lxs mentores y lxs mentorandxs. Para
+ello, utilizaremos lo que se conoce en la literatura como el <a href="https://dl.acm.org/doi/pdf/10.1145/362619.362631">problema del
 matrimonio estable</a>. El problema consiste en lo siguiente:</p>
 <p>Dadas n personas de un grupo A, y n personas de un grupo B, donde
 cada persona del grupo A ha clasificado a todxs lxs miembrxs del grupo B
@@ -423,14 +427,14 @@ realiza la asignación utilizando el algoritmo implementado en el paquete
 <p>A continuación mostramos cómo se ha realizado el match, así como su
 implementación en <code>R</code>. Para poder llevar a cabo todo el
 proceso, se han implementado funciones adicionales. Dichas funciones
-están en el paquete <code>MatchMentoring</code> disponible en <a href="https://bitbucket.org/joaquin-martinez-minaya/mentorias-seb-biostatnet/src/master/">https://bitbucket.org/joaquin-martinez-minaya/mentorias-seb-biostatnet/src/master/</a>.</p>
+están en el paquete <code>MatchMentoring</code> disponible en <a href="https://github.com/jmartinez-minaya/mentorias-seb-biostatnet">https://github.com/jmartinez-minaya/mentorias-seb-biostatnet</a>.</p>
 <p>Como primer paso, hemos de determinar una <strong>lista de
 mentores</strong> para cada mentorandx ordenados por prioridad. Esta
 lista estará basada en 4 criterios extraídos del formulario y que como
 comité pensamos que serían los más relevantes a la hora de realizar el
 match. Cada criterio ha sido cuantificado en base a la importancia que
 pensamos que podría tener. Así, se les ha asignando un peso. Este primer
-paso lo lleva a cabo la función <a href="https://bitbucket.org/joaquin-martinez-minaya/mentorias-seb-biostatnet/src/master/MatchMentoring/R/preferences_mentorandx.R"><code>preferences_mentorandx.R</code></a>.
+paso lo lleva a cabo la función <a href="https://github.com/jmartinez-minaya/mentorias-seb-biostatnet/blob/main/MatchMentoring/R/preferences_mentorandx.R"><code>preferences_mentorandx.R</code></a>.
 Tanto los criterios como los pesos se describen a continuación:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Email</strong>: si el mentorandx está en la base de datos
@@ -451,7 +455,7 @@ tres posibles grupos: <em>0-10</em>, o <em>&gt; 10</em> o <em>me es
 indiferente</em>.</p></li>
 </ol>
 <p>Procedemos de una forma similar con la base de datos de lxs mentores.
-Este segundo paso se ha programado en la función <a href="https://bitbucket.org/joaquin-martinez-minaya/mentorias-seb-biostatnet/src/master/MatchMentoring/R/preferences_mentxr.R"><code>preferences_mentxr.R</code></a>.
+Este segundo paso se ha programado en la función <a href="https://github.com/jmartinez-minaya/mentorias-seb-biostatnet/blob/main/MatchMentoring/R/preferences_mentxr.R"><code>preferences_mentxr.R</code></a>.
 En este caso, tenemos en cuenta los siguientes criterios:</p>
 <ol style="list-style-type: decimal">
 <li><p><strong>Email</strong>: de forma similar al caso anterior,
@@ -468,11 +472,11 @@ probabilidades, realizamos un muestreo aleatorio de la muestra de tal
 forma que el orden de inscripción no condicione el resultado final.
 Hasta aquí, obtendríamos dos matrices que representarían las
 preferencias de los mentorandxs cuantificadas usando probabilidades, y
-lo mismo para lxs mentores. Estas matrices las podemos ver si en el
-script <a href="https://bitbucket.org/joaquin-martinez-minaya/mentorias-seb-biostatnet/src/master/r/1_matching.R"><code>1_matching.R</code></a>.</p>
+lo mismo para lxs mentores. Estas matrices las podemos ver en el script
+<a href="https://github.com/jmartinez-minaya/mentorias-seb-biostatnet/blob/main/r/matching.R"><code>1_matching.R</code></a>.</p>
 <p>Por último, usamos la función <code>galeShapley.marriageMarket</code>
 del paquete <code>matchingR</code> para unir las dos bases de datos. Lo
-podemos ver en el script <a href="https://bitbucket.org/joaquin-martinez-minaya/mentorias-seb-biostatnet/src/master/r/1_matching.R"><code>1_matching.R</code></a>.</p>
+podemos ver en el script <a href="https://github.com/jmartinez-minaya/mentorias-seb-biostatnet/blob/main/r/matching.R"><code>1_matching.R</code></a>.</p>
 </div>
 
 
